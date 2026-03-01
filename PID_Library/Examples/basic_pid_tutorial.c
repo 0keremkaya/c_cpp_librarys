@@ -1,5 +1,5 @@
 /*
-Örnek konum+hız kaskad pid kontrol kodudur.
+Örnek konum pid kontrol kodudur.
 Doğrudan derlenip çalıştırılamaz.
 Kullanılan sisteme göre zaman ölçümü yapılmalıdır.
 */
@@ -32,4 +32,5 @@ int main(void)
         dt = (current_time - last_time);
         last_time=current_time;
     }
+
 }

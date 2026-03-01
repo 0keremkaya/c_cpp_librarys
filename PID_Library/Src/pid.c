@@ -15,6 +15,7 @@ float PID_Compute(PID_Controller* pid, float setpoint, float measurement, float 
     //pid->integral += error * dt;
     float derivative = (error - pid->previous_error) / dt;
 
+	//Anti-WindUp integral sıfırlama
     if(pid->previous_error > 0 && error < 0)
 	{
 		pid->integral=0;
@@ -39,3 +40,4 @@ float PID_Compute(PID_Controller* pid, float setpoint, float measurement, float 
     return output;
 
 }
+
